@@ -1,6 +1,6 @@
 {
     "name": "buchheim",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "Buchheim tree layout algorithm for TypeScript.",
     "license": "MIT",
     "type": "module",
@@ -8,6 +8,7 @@
     "module": "./dist/esm/index.js",
     "types": "./dist/esm/index.d.ts",
     "files": [
+        "README.md",
         "dist/esm/index.js",
         "dist/esm/index.d.ts",
         "dist/cjs/index.cjs"
