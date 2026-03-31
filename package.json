@@ -1,0 +1,48 @@
+{
+    "name": "buchheim",
+    "version": "0.0.1",
+    "description": "Buchheim tree layout algorithm for TypeScript.",
+    "license": "MIT",
+    "type": "module",
+    "main": "./dist/cjs/index.cjs",
+    "module": "./dist/esm/index.js",
+    "types": "./dist/esm/index.d.ts",
+    "files": [
+        "dist/esm/index.js",
+        "dist/esm/index.d.ts",
+        "dist/cjs/index.cjs"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/esm/index.d.ts",
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.cjs",
+            "default": "./dist/esm/index.js"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/reverofevil/buchheim.git"
+    },
+    "bugs": {
+        "url": "https://github.com/reverofevil/buchheim/issues"
+    },
+    "homepage": "https://github.com/reverofevil/buchheim#readme",
+    "scripts": {
+        "bench": "node --experimental-strip-types --experimental-specifier-resolution=node src/bench.test.ts",
+        "build": "tsc -p tsconfig.build.esm.json && tsc -p tsconfig.build.cjs.json && node -e \"require('node:fs').renameSync('dist/cjs/index.js', 'dist/cjs/index.cjs')\"",
+        "build:examples": "node --experimental-strip-types --experimental-specifier-resolution=node examples/display.ts",
+        "check": "npm run check:types && npm run check:test",
+        "check:test": "node --experimental-strip-types --experimental-specifier-resolution=node --test src/index.test.ts",
+        "check:types": "tsc -p tsconfig.json --noEmit",
+        "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+        "prepack": "npm run clean && npm run build",
+        "start": "npm run check:types"
+    },
+    "devDependencies": {
+        "@types/node": "^22.16.0",
+        "fast-check": "^4.3.0",
+        "simple-statistics": "^7.8.9",
+        "typescript": "^5.9.2"
+    }
+}
