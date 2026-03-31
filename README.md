@@ -2,7 +2,7 @@
 
 Compute compact layout of a rooted tree in linear time.
 
-Originally described in [Improving Walker's Algorithm to Run in Linear Time](https://doi.org/10.1007/3-540-36151-0_32) paper.
+Originally described in [Improving Walker's Algorithm to Run in Linear Time](https://doi.org/10.1007/3-540-36151-0_32) paper ([OCR](https://pastebin.com/ixE1gKw4)).
 
 Based on [this](https://github.com/is55555/layoutTree) Python implementation.
 
