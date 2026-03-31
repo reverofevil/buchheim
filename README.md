@@ -14,6 +14,10 @@ Linear time is [validated](./src/bench.test.ts) with benchmarking and statistics
 
 ## Usage
 
+```sh
+npm install buchheim
+```
+
 ```ts
 import { layout, normalize, type Tree } from "buchheim";
 
